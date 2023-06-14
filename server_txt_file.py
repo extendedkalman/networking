@@ -32,7 +32,7 @@ def main():
 
         """ Receiving the file data from the client. """
         data = conn.recv(SIZE).decode(FORMAT)
-        print(f"[RECV] Receiving the file data.")
+        print(f"[RECV] Receiving the file {data}.")
         file.write(data)
         conn.send("File data received".encode(FORMAT))
 
