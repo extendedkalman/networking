@@ -26,7 +26,7 @@ def main():
 
         """ Receiving the filename from the client. """
         filename = conn.recv(SIZE).decode(FORMAT)
-        print(f"[RECV] Receiving the filename.")
+        print(f"[RECV] Receiving the {filename}.")
         file = open(filename, "w")
         conn.send("Filename received.".encode(FORMAT))
 
